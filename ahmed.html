@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصفحة الرئيسية</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f0f0f0;margin:0;padding:0;}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:#0d6efd;color:#fff;flex-wrap:wrap;position:sticky;top:0;z-index:1000;}
+.logo img{height: 100px;;}
+.container{max-width:1200px;margin:40px auto;padding:0 16px;}
+.menu a{
+  display:block;
+  background:white;
+  margin:15px 0;
+  padding:18px;
+  font-size:22px;
+  text-align:center;
+  border-radius:10px;
+  text-decoration:none;
+  color:#0d6efd;
+  font-weight:bold;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  transition:.3s;
+}
+.menu a:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
+.socials{display:flex;gap:12px;align-items:center;}
+.socials a{width:40px;height:40px;display:flex;justify-content:center;align-items:center;border-radius:50%;transition:0.3s;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.socials svg{width:22px;height:22px;fill:#fff;}
+.socials .tiktok{background:#000;}
+.socials .instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);}
+.socials .facebook{background:#1877f2;}
+.socials .whatsapp{background:#25d366;}
+.socials .phone{background:#f44336;}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+  <img src="img/AA.png" alt="Logo">
+</div>
+
+<div class="socials">
+    <a href="#" class="tiktok"><svg viewBox="0 0 24 24"><path d="M9 2v14a4 4 0 1 0 4-4h2a6 6 0 1 1-6 6V2z"/></svg></a>
+    <a href="#" class="instagram"><svg viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7z"/></svg></a>
+    <a href="#" class="facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54"/></svg></a>
+    <a href="#" class="whatsapp"><svg viewBox="0 0 24 24"><path d="M16.67 13.29c-.27-.14-1.61-.79"/></svg></a>
+    <a href="#" class="phone"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053"/></svg></a>
+</div>
+</header>
+
+
+<div class="container">
+  <h2 style="text-align:center;margin-bottom:25px;color:#0d6efd;">اقسام لسته الاسعار </h2>
+
+  <div class="menu">
+    <a href="tasis.html">قسم التأسيس</a>
+    <a href="tashteeb.html">قسم التشطيب</a>
+    <a href="cameras.html">قسم الكاميرات</a>
+    <a href="smart.html">قسم السمارت</a>
+  </div>
+</div>
+
+</body>
+</html>

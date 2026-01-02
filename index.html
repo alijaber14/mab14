@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الصفحة الرئيسية</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f0f0f0;margin:0;padding:0;}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;background:#0d6efd;color:#fff;flex-wrap:wrap;position:sticky;top:0;z-index:1000;}
+.logo img{height: 70px;;}
+.container{max-width:1200px;margin:40px auto;padding:0 16px;}
+.menu a{
+  display:block;
+  background:white;
+  margin:15px 0;
+  padding:18px;
+  font-size:22px;
+  text-align:center;
+  border-radius:10px;
+  text-decoration:none;
+  color:#0d6efd;
+  font-weight:bold;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  transition:.3s;
+}
+.menu a:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
+.socials{display:flex;gap:12px;align-items:center;}
+.socials a{width:40px;height:40px;display:flex;justify-content:center;align-items:center;border-radius:50%;transition:0.3s;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.socials svg{width:22px;height:22px;fill:#fff;}
+.socials .tiktok{background:#000;}
+.socials .instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);}
+.socials .facebook{background:#1877f2;}
+.socials .whatsapp{background:#25d366;}
+.socials .phone{background:#f44336;}
+/* Products Grid */
+.products{
+    padding:25px;
+    display:grid;
+    gap:20px; /* المسافة بين الكروت */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .products{
+        grid-template-columns: repeat(3, 1fr); /* 3 كروت في الصف على التابلت */
+    }
+}
+
+@media (min-width: 1024px) {
+    .products{
+        grid-template-columns: repeat(5, 1fr); /* 5 كروت في الصف على الكمبيوتر */
+    }
+}
+/* Header */
+header{
+    background: rgb(0, 128, 255);
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;       /* يسمح للعنصرين يلتفوا على الموبايل */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+header h1{
+    margin: 5px 0;
+    font-size: 20px;       /* تصغير حجم العنوان على الموبايل */
+    color: #ffffff;
+    flex: 1 1 100%;        /* العنوان ياخد كل العرض على الموبايل */
+    text-align: center;     /* يوضع في الوسط */
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;        /* السماح للروابط بالالتفاف */
+    justify-content: center; /* توسيط الروابط */
+    gap: 8px;
+}
+
+nav a{
+    margin: 5px 4px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;       /* تصغير حجم الروابط على الموبايل */
+}
+
+nav a:hover{
+    background: #e0e0e0;
+    color: black;
+}
+.social-links {
+    display: flex;        /* نخليهم جنب بعض */
+    gap: 10px;            /* مسافة بسيطة بينهم */
+    justify-content: center; /* توسيط على الصفحة */
+    padding: 0;
+    margin: 0;
+}
+
+.social-links a {
+    all: unset;           /* يشيل أي CSS وراثي */
+    cursor: pointer;      /* يبين إنهم قابلين للنقر */
+    color: inherit;       /* اللون الطبيعي للنص */
+    transition: color 0.2s; /* تأثير سلس لتغيير اللون */
+}
+
+.social-links a:hover {
+    color: rgb(255, 238, 0);         /* يتحول للسود عند المرور أو اللمس */
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+  <img src="img/AA.png" alt="Logo">
+</div>
+
+<div class="social-links">
+    <a href="https://www.tiktok.com/@mab14.4?_r=1&_t=ZS-92MS6z8JAjy">TikTok</a>
+    <a href="https://www.instagram.com/ahmedhndwy?igsh=YW13ejQ5MGVyZzNx">Instagram</a>
+    <a href="https://www.facebook.com/share/1CwDCbVL7s/">Facebook</a>
+<a href="https://wa.me/201110696728" target="_blank">WhatsApp</a>
+    <a href="#"><a href="tel:201110696728">هاتف</a>
+</a>
+</div>
+
+
+</div>
+</header>
+
+
+<div class="container">
+  <h2 style="text-align:center;margin-bottom:25px;color:#0d6efd;">اقسام لستة الاسعار </h2>
+
+  <div class="menu">
+    <a href="tasess.html">قسم التأسيس</a>
+    <a href="tashteeb.html">قسم التشطيب</a>
+    <a href="cameras.html">منتجات رائجة  </a>
+    <a href="smart.html">قسم السمارت</a>
+  </div>
+</div>
+
+</body>
+</html>

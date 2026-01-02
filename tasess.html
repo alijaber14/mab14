@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قسم التأسيس</title>
+
+<style>   
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header */
+header{
+    background: rgb(0, 128, 255);
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;       /* يسمح للعنصرين يلتفوا على الموبايل */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+header h1{
+    margin: 5px 0;
+    font-size: 20px;       /* تصغير حجم العنوان على الموبايل */
+    color: #ffffff;
+    flex: 1 1 100%;        /* العنوان ياخد كل العرض على الموبايل */
+    text-align: center;     /* يوضع في الوسط */
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;        /* السماح للروابط بالالتفاف */
+    justify-content: center; /* توسيط الروابط */
+    gap: 8px;
+}
+
+nav a{
+    margin: 5px 4px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;       /* تصغير حجم الروابط على الموبايل */
+}
+
+nav a:hover{
+    background: #e0e0e0;
+    color: black;
+}
+
+
+/* Products Grid */
+.products{
+    padding:25px;
+    display:grid;
+    gap:20px; /* المسافة بين الكروت */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .products{
+        grid-template-columns: repeat(3, 1fr); /* 3 كروت في الصف على التابلت */
+    }
+}
+
+@media (min-width: 1024px) {
+    .products{
+        grid-template-columns: repeat(5, 1fr); /* 5 كروت في الصف على الكمبيوتر */
+    }
+}
+
+
+/* Single Product Card */
+.product{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    text-align:center;
+    transition:0.3s;
+    padding-bottom: 20px; /* مسافة داخل الكارت من تحت */
+}
+
+.product:hover{
+    transform:scale(1.05);
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+.product img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.product h3{
+    font-size:20px;
+    margin:12px 0 5px;
+}
+
+.price{
+    font-size:18px;
+    font-weight:bold;
+    color:#d32f2f;
+    margin-bottom:15px;
+}
+
+/* Order Button */
+.order-btn{
+    background-color:#28a745;
+    color:white;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.order-btn:hover{
+    background-color:#218838;
+}
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin:20px;
+}
+
+.search-box input{
+    width:100%;
+    max-width:400px;
+    padding:12px 15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>قسم التأسيس</h1>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="tasess.html">تأسيس</a>
+    <a href="tashteeb.html">تشطيب</a>
+    <a href="cameras.html">كاميرات</a>
+    <a href="smart.html">سمارت</a>
+  </nav>
+</header>
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث عن منتج..." onkeyup="searchProducts()">
+</div>
+
+<div class="products">
+<p id="noResults" style="text-align:center;display:none;font-weight:bold;">
+لا توجد نتائج
+</p>
+
+    <div class="product">
+        <h3>خرطوم ارضي 16</h3>
+        <p class="price">السعر: 470 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+ارضي+16" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+
+    <div class="product">
+        <h3>خرطوم ارضي 23</h3>
+        <p class="price">السعر: 825 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+ارضي+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+
+    <div class="product">
+        <h3>علبة مورا</h3>
+        <p class="price">السعر: 8 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+علبة+مورا" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+
+    <div class="product">
+        <h3>خرطوم واير 16</h3>
+        <p class="price">السعر: 250 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+16" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+
+    <div class="product">
+        <h3>خرطوم واير 23</h3>
+        <p class="price">السعر: 350 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+<div class="product">
+        <h3>فلسكبل 16  </h3>
+        <p class="price">السعر: 80 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>فلسكبل 11  </h3>
+        <p class="price">السعر: 70 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>لوحة عداد 40×60   </h3>
+        <p class="price">السعر: 1200 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>لوحة 12 خط    </h3>
+        <p class="price">السعر: 400 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>مسمار صلب 3 سم   </h3>
+        <p class="price">السعر: 100 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>سلك رباط مجلفن   </h3>
+        <p class="price">السعر: 110 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>لوحة اتصالات مورا   </h3>
+        <p class="price">السعر: 1600 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>دواية خزف   </h3>
+        <p class="price">السعر: 15 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>لمبه 12 وات   </h3>
+        <p class="price">السعر: 40 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>بواط 25×30 وتر بروف   </h3>
+        <p class="price">السعر: 350 ج.م</p>
+        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+</div>
+
+<script>
+function searchProducts(){
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let products = document.querySelectorAll('.product');
+    let found = false;
+
+    products.forEach(product=>{
+        let text = product.innerText.toLowerCase();
+        if(text.includes(input)){
+            product.style.display = "block";
+            found = true;
+        }else{
+            product.style.display = "none";
+        }
+    });
+
+    document.getElementById("noResults").style.display =
+        found ? "none" : "block";
+}
+</script>
+
+<script>
+function searchProducts(){
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let products = document.querySelectorAll('.product');
+
+    products.forEach(product=>{
+        let text = product.innerText.toLowerCase();
+        product.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+<script>
+window.onload = function () {
+    document.querySelectorAll(".product").forEach(product => {
+        const nameEl = product.querySelector("h3");
+        const priceEl = product.querySelector(".price");
+        const link = product.querySelector("a");
+
+        if (nameEl && priceEl && link) {
+            const name = nameEl.innerText.trim();
+            const price = priceEl.innerText.replace("السعر:", "").trim();
+            const phone = "201110696728";
+
+            const msg = `أريد طلب المنتج: ${name} - السعر: ${price}`;
+
+            link.href =
+                "https://wa.me/" +
+                phone +
+                "?text=" +
+                encodeURIComponent(msg);
+        }
+    });
+};
+</script>
+
+</body>
+</html>
