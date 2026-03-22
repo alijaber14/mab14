@@ -105,6 +105,58 @@ nav a:hover{
     cursor:pointer;
     transition:0.3s;
 }
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 15px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+.product p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+}
+
+.order-btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+    background: #25D366;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 </style>
 </head>
 <body>
@@ -124,12 +176,142 @@ nav a:hover{
 
 <div class="products section active">
      <div class="product">
-        <h3> سدادة</h3>
-        <p class="price">السعر: 9 ج.م</p>
+        <img src="s11 (2).jpg" alt="سوستة 4.5 ملي 15 متر">
+        <h3>سوستة فيبر جلاس 4.5 ملي</h3>
+        <p>طول: 15 متر</p>
+        <p class="price">500 ج.م</p>
         <a href="https://wa.me/201110696728" target="_blank">
-            <button class="order-btn ">طلب المنتج</button>
+            <button class="order-btn">طلب المنتج</button>
         </a>
     </div>
+
+    <!-- منتج 2 -->
+    <div class="product">
+        <img src="s11 (2).jpg" alt="سوستة 4.5 ملي 20 متر">
+        <h3>سوستة فيبر جلاس 4.5 ملي</h3>
+        <p>طول: 20 متر</p>
+        <p class="price">600 ج.م</p>
+        <a href="https://wa.me/201110696728" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+
+    <!-- منتج 3 -->
+    <div class="product">
+        <img src="s11 (2).jpg" alt="سوستة 4.5 ملي 30 متر">
+        <h3>سوستة فيبر جلاس 4.5 ملي</h3>
+        <p>طول: 30 متر</p>
+        <p class="price">700 ج.م</p>
+        <a href="https://wa.me/201110696728" target="_blank">
+            <button class="order-btn">طلب المنتج</button>
+        </a>
+    </div>
+<div class="product">
+    <img src="s11 (2).jpg" alt="سوستة 5 ملي 15 متر">
+    <h3>سوستة فيبر جلاس 5 ملي</h3>
+    <p>طول: 15 متر</p>
+    <p class="price">550 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s11 (2).jpg" alt="سوستة 5 ملي 20 متر">
+    <h3>سوستة فيبر جلاس 5 ملي</h3>
+    <p>طول: 20 متر</p>
+    <p class="price">650 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s11 (2).jpg" alt="سوستة 5 ملي 30 متر">
+    <h3>سوستة فيبر جلاس 5 ملي</h3>
+    <p>طول: 30 متر</p>
+    <p class="price">800 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+<div class="product">
+    <img src="s11 (2).jpg" alt="سوستة 6 ملي 15 متر">
+    <h3>سوستة فيبر جلاس 6 ملي</h3>
+    <p>طول: 15 متر</p>
+    <p class="price">700 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s11 (2).jpg" alt="سوستة 6 ملي 20 متر">
+    <h3>سوستة فيبر جلاس 6 ملي</h3>
+    <p>طول: 20 متر</p>
+    <p class="price">850 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s11 (2).jpg" alt="سوستة 6 ملي 30 متر">
+    <h3>سوستة فيبر جلاس 6 ملي</h3>
+    <p>طول: 30 متر</p>
+    <p class="price">1000 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+<div class="product">
+    <img src="s12.png" alt="سوستة عيدان 30 سم">
+    <h3>سوستة عيدان</h3>
+    <p>مقاس: 30 سم - 5 متر</p>
+    <p class="price">900 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s12.png" alt="سوستة عيدان 33 سم">
+    <h3>سوستة عيدان</h3>
+    <p>مقاس: 33 سم</p>
+    <p class="price">800 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s12.png" alt="سوستة عيدان 44 سم">
+    <h3>سوستة عيدان</h3>
+    <p>مقاس: 44 سم</p>
+    <p class="price">950 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+
+<div class="product">
+    <img src="s12.png" alt="سوستة عيدان 55 سم">
+    <h3>سوستة عيدان</h3>
+    <p>مقاس: 55 سم</p>
+    <p class="price">1100ج.م  </p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
+<div class="product">
+    <img src="s13.jpeg" alt="سوستة عيدان 55 سم">
+    <h3>خواشة رجلاش مع مانع للتراب </h3>
+    <p>تفتح حتي: 13 سم</p>
+    <p class="price">  700 ج.م</p>
+    <a href="https://wa.me/201110696728" target="_blank">
+        <button class="order-btn">طلب المنتج</button>
+    </a>
+</div>
 
 <script>
 function showSection(id){
