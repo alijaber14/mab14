@@ -147,6 +147,22 @@ nav a:hover{
     border:1px solid #ccc;
     font-size:16px;
 }
+#cart {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none; /* مخفية في البداية */
+    z-index: 1000;
+}
+
+.cart-hidden {
+    display: none;
+}
 
 </style>
 
@@ -162,6 +178,17 @@ nav a:hover{
     <a href="cameras.html">كاميرات</a>
     <a href="smart.html">سمارت</a>
   </nav>
+  <div id="cart-container">
+    <button id="cart-btn">🛒 السلة (<span id="cart-count">0</span>)</button>
+    <div id="cart" class="cart-hidden">
+        <h3>سلتك</h3>
+        <ul id="cart-items"></ul>
+        <p>المجموع: <span id="cart-total">0</span> ج.م</p>
+        <button id="checkout">الدفع</button>
+        <button id="close-cart">اغلاق</button>
+    </div>
+</div>
+
 </header>
 <div class="search-box">
     <input type="text" id="searchInput" placeholder="ابحث عن منتج..." onkeyup="searchProducts()">
@@ -174,7 +201,7 @@ nav a:hover{
 
     <div class="product">
         <h3>خرطوم ارضي 16</h3>
-        <p class="price">السعر: 470 ج.م</p>
+        <p class="price">السعر: 530 ج.م</p>
         <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+ارضي+16" target="_blank">
             <button class="order-btn">طلب المنتج</button>
         </a>
@@ -182,7 +209,7 @@ nav a:hover{
 
     <div class="product">
         <h3>خرطوم ارضي 23</h3>
-        <p class="price">السعر: 825 ج.م</p>
+        <p class="price">السعر: 880 ج.م</p>
         <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+ارضي+23" target="_blank">
             <button class="order-btn">طلب المنتج</button>
         </a>
@@ -198,7 +225,7 @@ nav a:hover{
 
     <div class="product">
         <h3>خرطوم واير 16</h3>
-        <p class="price">السعر: 250 ج.م</p>
+        <p class="price">السعر: 260 ج.م</p>
         <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+16" target="_blank">
             <button class="order-btn">طلب المنتج</button>
         </a>
@@ -206,21 +233,21 @@ nav a:hover{
 
     <div class="product">
         <h3>خرطوم واير 23</h3>
-        <p class="price">السعر: 350 ج.م</p>
+        <p class="price">السعر: 360 ج.م</p>
         <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
             <button class="order-btn">طلب المنتج</button>
         </a>
     </div>
 <div class="product">
         <h3>فلسكبل 16  </h3>
-        <p class="price">السعر: 80 ج.م</p>
+        <p class="price">السعر: 90 ج.م</p>
         <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
             <button class="order-btn">طلب المنتج</button>
         </a>
     </div>
     <div class="product">
         <h3>فلسكبل 11  </h3>
-        <p class="price">السعر: 70 ج.م</p>
+        <p class="price">السعر: 80 ج.م</p>
         <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
             <button class="order-btn">طلب المنتج</button>
         </a>
@@ -275,12 +302,15 @@ nav a:hover{
         </a>
     </div>
     <div class="product">
-        <h3>بواط 25×30 وتر بروف   </h3>
-        <p class="price">السعر: 350 ج.م</p>
-        <a href="https://wa.me/201110696728?text=أريد+طلب+خرطوم+واير+23" target="_blank">
-            <button class="order-btn">طلب المنتج</button>
-        </a>
-    </div>
+    <h3>بواط 25×30 وتر بروف</h3>
+    <p class="price">السعر: 350 ج.م</p>
+    <button class="add-to-cart" 
+            data-name="بواط 25×30 وتر بروف" 
+            data-price="350">
+        أضف إلى السلة
+    </button>
+</div>
+
 </div>
 
 <script>
@@ -338,6 +368,29 @@ window.onload = function () {
         }
     });
 };
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+addToCartButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const name = btn.getAttribute("data-name");
+        const price = parseFloat(btn.getAttribute("data-price"));
+
+        // جلب السلة الحالية من LocalStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // هل المنتج موجود قبل كده؟
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+            existing.qty += 1; // زيادة الكمية
+        } else {
+            cart.push({ name, price, qty: 1 });
+        }
+
+        // حفظ السلة
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${name} تم إضافته للسلة`);
+    });
+});
 </script>
 
 </body>
